@@ -10,6 +10,11 @@ class SubjectByField(BaseModel):
     values: list[str]
 
 
+class User(BaseModel):
+    username: str
+    password: str
+
+
 class Person(BaseModel):
     uuid: UUID = Field(default_factory=uuid4)
     full_name: str

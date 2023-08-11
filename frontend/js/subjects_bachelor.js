@@ -2,12 +2,29 @@ import { currentPage, loadHeader, serverURL, postJSON } from "./global.js";
 
 const studyLevel = "Бакалавриат";
 window.onload = function () {
+  checkLogin();
   loadHeader(document);
   currentPage();
   addStaticEventListeners();
   addEventListenersToDynamicElements();
   createTables();
 };
+async function checkLogin() {
+  console.log(1);
+  const username = localStorage.getItem("username");
+  const password = localStorage.getItem("password");
+  console.log(username, password);
+  if (username === null || password === null) {
+    window.location.href = "/login.html";
+  }
+  const answer = await postJSON(serverURL + "login", {
+    username: localStorage.getItem("username"),
+    password: localStorage.getItem("password"),
+  });
+  if (!answer) {
+    window.location.href = "/login.html";
+  }
+}
 function createSubjectRow(value) {
   const row = document.createElement("tr");
   row.innerHTML = `     <tr>

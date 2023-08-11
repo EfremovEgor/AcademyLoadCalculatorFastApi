@@ -13,6 +13,7 @@ class_to_file = {
     schemas.Person: "persons.json",
     schemas.Position: "positions.json",
     schemas.Subject: "subjects.json",
+    schemas.User: "users.json",
 }
 
 
@@ -152,6 +153,14 @@ def get_subjects_by_study_level() -> dict:
         else:
             response[item.study_level] = [item]
     print(response.keys())
+
+
+def check_user(user: schemas.User) -> bool:
+    users = get_data_by_class(schemas.User)
+    for user_ in users:
+        if user_ == user:
+            return True
+    return False
 
 
 def get_unique_subjects_by_type(study_level: str) -> dict:

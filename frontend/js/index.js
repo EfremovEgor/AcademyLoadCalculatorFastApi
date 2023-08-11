@@ -2,6 +2,7 @@ import { currentPage, loadHeader, serverURL, postJSON } from "./global.js";
 let currentEditPerson = "";
 
 window.onload = function () {
+  checkLogin();
   loadHeader(document);
   currentPage();
   refreshTable();
@@ -9,7 +10,22 @@ window.onload = function () {
   setSelectOptions();
   addEventListenersToDynamicElements();
 };
-
+async function checkLogin() {
+  console.log(1);
+  const username = localStorage.getItem("username");
+  const password = localStorage.getItem("password");
+  console.log(username, password);
+  if (username === null || password === null) {
+    window.location.href = "/login.html";
+  }
+  const answer = await postJSON(serverURL + "login", {
+    username: localStorage.getItem("username"),
+    password: localStorage.getItem("password"),
+  });
+  if (!answer) {
+    window.location.href = "/login.html";
+  }
+}
 async function setSelectOptions() {
   const position_selects = $(".position_select");
   const response = await fetch(serverURL + "positions");
