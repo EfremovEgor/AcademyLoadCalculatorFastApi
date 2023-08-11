@@ -1,0 +1,10 @@
+input:disabled,
+select:disabled {
+  background-color: white;
+  color: black;
+  opacity: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Employee Salary/Load Calculator</title>
+    <meta name="description" content>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="stylesheet" href="./css/disabled_styling.css">
+    <script src="./js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script type="module" src="./js/subjects_masters.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Магистратура</h1>
+    </div>
+    <div id="modalInvestigateSubjectDialog" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modalInvestigateSubjectDialog-heading modal-heading">
+
+                </div>
+                <div class="close_modal">
+
+                    <svg viewBox="0 0 24 24" class="close_modal-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+                                fill="#0F0F0F"></path>
+                        </g>
+                    </svg>
+                </div>
+
+
+            </div>
+            <div class="modalInvestigateSubjectDialog-items">
+            </div>
+        </div>
+
+
+    </div>
+    <div id="modalInvestigateEmployeeDialog" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-heading">
+                    Cотрудник
+                </div>
+                <div class="close_modal">
+                    <svg viewBox="0 0 24 24" class="close_modal-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+                                fill="#0F0F0F"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <form method="post" id="investigateEmployeeForm">
+                <div class="input_container">
+                    <p class="input_text">
+                        ФИО:
+                    </p>
+                    <input disabled type="text" name="full_name" id="change_full_name">
+                </div>
+                <div class="input_container">
+                    <p class="input_text">
+                        Дата рождения:
+                    </p>
+                    <input disabled type="date" name="birth_date" id="change_birth_date">
+                </div>
+                <div disabled class="input_container">
+                    <p class="input_text">
+                        Телефон:
+                    </p>
+                    <input disabled type="tel" name="phone_number" id="change_phone_number">
+                </div>
+                <div class="input_container">
+                    <p class="input_text">
+                        Ученая степень:
+                    </p>
+                    <input disabled type="text" name="degree" id="change_degree">
+                </div>
+                <div class="input_container">
+                    <p class="input_text">
+                        Ученое звание:
+                    </p>
+                    <input disabled type="text" name="academic_title" id="change_academic_title">
+                </div>
+                <div class="input_container">
+                    <p class="input_text">
+                        Должность ППС:
+                    </p>
+                    <input disabled type="text" class="position_select" name="position" id="change_position">
+
+
+                </div>
+                <div class="input_container">
+                    <p class="input_text">
+                        Ставка:
+                    </p><input disabled type="number" name="rate" id="change_rate">
+                </div>
+            </form>
+            <div class="subject_headings_container">
+                <span name="name" class="subject_heading">Название предмета</span>
+                <span name="group_name" class="subject_heading">Группа</span>
+                <span name="course" class="subject_heading">Курс</span>
+                <span name="semester" class="subject_heading">Семестр</span>
+                <span name="holding_type" class="subject_heading">Тип</span>
+            </div>
+            <div id="edit_person_add_subject">
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
