@@ -12,6 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import Body
 from typing import Any
 from fastapi.templating import Jinja2Templates
+import uvicorn
 
 SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
 ALGORITHM = "HS256"
@@ -164,3 +165,7 @@ def get_subjects() -> list[schemas.Subject]:
 @app.get("/positions")
 def get_positions() -> list[schemas.Position]:
     return get_data_by_class(schemas.Position)
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
