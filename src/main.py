@@ -1,13 +1,17 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
 from utils import (
     get_data_by_class,
     response_from_model,
 )
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 import utils
 import schemas
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import Body
 from typing import Any
+from fastapi.templating import Jinja2Templates
 
 SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
 ALGORITHM = "HS256"
@@ -15,6 +19,12 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 30
 origins = ["http://localhost", "http://localhost:8080", "http://localhost:3000"]
 
 app = FastAPI()
+app.mount(
+    "/static",
+    StaticFiles(directory=Path(__file__).parent.parent.absolute() / "static"),
+    name="static",
+)
+templates = Jinja2Templates(Path(__file__).parent.parent.absolute() / "templates")
 
 app.add_middleware(
     CORSMiddleware,
@@ -29,6 +39,46 @@ app.add_middleware(
 def get_unique_subjects_by_type(study_level: str = Body(embed=True)) -> dict:
     data = utils.get_unique_subjects_by_type(study_level)
     return data
+
+
+@app.get("/", response_class=HTMLResponse)
+async def read_index(request: Request):
+    return templates.TemplateResponse(
+        "index.html",
+        {
+            "request": request,
+        },
+    )
+
+
+@app.get("/subjects_masters", response_class=HTMLResponse)
+async def read_index(request: Request):
+    return templates.TemplateResponse(
+        "subjects_masters.html",
+        {
+            "request": request,
+        },
+    )
+
+
+@app.get("/subjects_bachelor", response_class=HTMLResponse)
+async def read_index(request: Request):
+    return templates.TemplateResponse(
+        "subjects_bachelor.html",
+        {
+            "request": request,
+        },
+    )
+
+
+@app.get("/login", response_class=HTMLResponse)
+async def read_index(request: Request):
+    return templates.TemplateResponse(
+        "login.html",
+        {
+            "request": request,
+        },
+    )
 
 
 @app.post("/subjects/by_groups")

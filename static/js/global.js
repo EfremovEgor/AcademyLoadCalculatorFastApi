@@ -3,13 +3,13 @@ function loadHeader(doc) {
   const template = doc.createElement("template");
   template.innerHTML = `
       <header class="header">
-      <div class="container"><a  href="../index.html" class="header-item">
+      <div class="container"><a  href="../" class="header-item">
       ППС
       </a>
-      <a  href="../subjects_masters.html" class="header-item">
+      <a  href="../subjects_masters" class="header-item">
       Магистратура
       </a>
-      <a  href="../subjects_bachelor.html" class="header-item">
+      <a  href="../subjects_bachelor" class="header-item">
       Бакалавриат
       </a>
 

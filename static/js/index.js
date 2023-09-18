@@ -16,14 +16,14 @@ async function checkLogin() {
   const password = localStorage.getItem("password");
   console.log(username, password);
   if (username === null || password === null) {
-    window.location.href = "/login.html";
+    window.location.href = "/login";
   }
   const answer = await postJSON(serverURL + "login", {
     username: localStorage.getItem("username"),
     password: localStorage.getItem("password"),
   });
   if (!answer) {
-    window.location.href = "/login.html";
+    window.location.href = "/login";
   }
 }
 async function setSelectOptions() {
