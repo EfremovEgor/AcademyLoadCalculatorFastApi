@@ -38,6 +38,7 @@ async function setSelectOptions() {
     }
   }
 }
+
 function createRow(data) {
   const table = $(".table")[0];
   const infoCell = document.createElement("td");

@@ -4,9 +4,7 @@ from utils import (
     response_from_model,
 )
 import utils
-import json
 import schemas
-import pydantic_core
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import Body
 from typing import Any
@@ -14,14 +12,13 @@ from typing import Any
 SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
-origins = ["*"]
+origins = ["http://localhost", "http://localhost:8080", "http://localhost:3000"]
 
-
-app = FastAPI(docs_url=None, redoc_url=None)
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -94,8 +91,6 @@ def get_person_by_uuid(uuid: str = Body(embed=True)) -> schemas.PersonResponse:
 def get_subjects_by_field(
     fields: list[str], values: list[Any]
 ) -> list[schemas.Subject]:
-    # values = payload.values
-    # fields = payload.fields
     return sorted(
         [
             item
