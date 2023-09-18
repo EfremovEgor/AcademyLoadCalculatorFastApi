@@ -17,12 +17,12 @@ async function checkLogin() {
   if (username === null || password === null) {
     window.location.href = "/login.html";
   }
-  const answer = await postJSON(serverURL + "login", {
+  const answer = await postJSON(serverURL + "login_req", {
     username: localStorage.getItem("username"),
     password: localStorage.getItem("password"),
   });
   if (!answer) {
-    window.location.href = "/login.html";
+    window.location.href = "/login";
   }
 }
 function createSubjectRow(value) {

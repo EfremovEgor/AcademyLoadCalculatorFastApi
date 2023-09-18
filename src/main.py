@@ -126,7 +126,7 @@ def delete_person_by_uuid(uuid: str = Body(embed=True)) -> dict:
     return {"status": "success"}
 
 
-@app.post("/login")
+@app.post("/login_req")
 def login(user: schemas.User) -> bool:
     return utils.check_user(user)
 

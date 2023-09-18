@@ -3,7 +3,7 @@ window.onload = function () {
   checkLogin();
 };
 async function checkLogin() {
-  const answer = await postJSON(serverURL + "login", {
+  const answer = await postJSON(serverURL + "login_req", {
     username: localStorage.getItem("username"),
     password: localStorage.getItem("password"),
   });
