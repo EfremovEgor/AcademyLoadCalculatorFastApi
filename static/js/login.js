@@ -1,6 +1,6 @@
 import { serverURL, postJSON } from "./global.js";
 window.onload = function () {
-  checkLogin();
+  // checkLogin();
 };
 async function checkLogin() {
   const answer = await postJSON(serverURL + "login_req", {

@@ -2,7 +2,7 @@ import { currentPage, loadHeader, serverURL, postJSON } from "./global.js";
 
 const studyLevel = "Магистратура";
 window.onload = function () {
-  checkLogin();
+  // checkLogin();
   loadHeader(document);
   currentPage();
   addStaticEventListeners();
