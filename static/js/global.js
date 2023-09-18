@@ -1,4 +1,4 @@
-const serverURL = "http://127.0.0.1:8000/";
+const serverURL = "http://95.163.228.150:8000/";
 function loadHeader(doc) {
   const template = doc.createElement("template");
   template.innerHTML = `
