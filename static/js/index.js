@@ -2,7 +2,7 @@ import { currentPage, loadHeader, serverURL, postJSON } from "./global.js";
 let currentEditPerson = "";
 
 window.onload = function () {
-  // checkLogin();
+  checkLogin();
   loadHeader(document);
   currentPage();
   refreshTable();
