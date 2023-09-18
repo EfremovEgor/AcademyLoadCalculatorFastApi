@@ -1,0 +1,84 @@
+[
+    {
+        "uuid": "f2165528-0a30-4f5d-a6d9-6150ed9283eb",
+        "full_name": "\u043d\u043e\u0432\u044b\u04391",
+        "birth_date": "0003-12-04",
+        "phone_number": "14523",
+        "degree": "45123",
+        "academic_title": "15234",
+        "position": "\u041f\u0440\u043e\u0444\u0435\u0441\u0441\u043e\u0440, \u0431/\u0441",
+        "rate": 0.1,
+        "subjects": [
+            {
+                "name": "Advanced Methods of Flight Mechanics",
+                "holding_type": "\u041b\u0430\u0431\u043e\u0440\u0430\u0442\u043e\u0440\u043d\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430",
+                "course": 2,
+                "semester": 3,
+                "group_name": "\u0418\u0423\u0421\u043c\u043415\u0430",
+                "total_time_for_group": 1,
+                "used": false,
+                "semester_duration": 18,
+                "study_level": "\u041c\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u0442\u0443\u0440\u0430",
+                "subject_type": "\u0412\u0430\u0440\u0438\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0430",
+                "department": "Mechanics and Control Processes",
+                "credit": 6
+            }
+        ],
+        "load_from_rate": 66,
+        "salary_from_rate": 10720.0,
+        "actual_load": [
+            18.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    },
+    {
+        "uuid": "2b0ff099-7336-49fa-ba9d-aab97b45ed9e",
+        "full_name": "\u043d\u043e\u0432\u044b\u04392",
+        "birth_date": "0213-05-04",
+        "phone_number": "14235",
+        "degree": "12345",
+        "academic_title": "12453",
+        "position": "\u041f\u0440\u043e\u0444\u0435\u0441\u0441\u043e\u0440, \u0431/\u0441",
+        "rate": 0.1,
+        "subjects": [
+            {
+                "name": "\u0418\u043d\u0436\u0435\u043d\u0435\u0440\u043d\u0430\u044f \u0433\u0440\u0430\u0444\u0438\u043a\u0430",
+                "holding_type": "\u041b\u0435\u043a\u0446\u0438\u044f",
+                "course": 1,
+                "semester": 1,
+                "group_name": "\u0418\u0423\u0421\u0431\u043407\u0440",
+                "total_time_for_group": 1,
+                "used": false,
+                "semester_duration": 18,
+                "study_level": "\u0411\u0430\u043a\u0430\u043b\u0430\u0432\u0440\u0438\u0430\u0442",
+                "subject_type": "\u0424\u0430\u043a\u0443\u043b\u044c\u0442\u0430\u0442\u0438\u0432",
+                "department": "\u0410\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u044b",
+                "credit": 2
+            },
+            {
+                "name": "\u0418\u043d\u0436\u0435\u043d\u0435\u0440\u043d\u0430\u044f \u0433\u0440\u0430\u0444\u0438\u043a\u0430",
+                "holding_type": "\u041b\u0435\u043a\u0446\u0438\u044f",
+                "course": 1,
+                "semester": 2,
+                "group_name": "\u0418\u0423\u0421\u0431\u043409\u0440",
+                "total_time_for_group": 1,
+                "used": false,
+                "semester_duration": 18,
+                "study_level": "\u0411\u0430\u043a\u0430\u043b\u0430\u0432\u0440\u0438\u0430\u0442",
+                "subject_type": "\u0424\u0430\u043a\u0443\u043b\u044c\u0442\u0430\u0442\u0438\u0432",
+                "department": "\u0410\u0440\u0445\u0438\u0442\u0435\u043a\u0442\u0443\u0440\u044b",
+                "credit": 2
+            }
+        ],
+        "load_from_rate": 66,
+        "salary_from_rate": 10720.0,
+        "actual_load": [
+            0.0,
+            0.0,
+            18.0,
+            18.0
+        ]
+    }
+]

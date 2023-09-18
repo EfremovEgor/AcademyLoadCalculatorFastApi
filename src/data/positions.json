@@ -1,0 +1,52 @@
+[
+    {
+        "position_name": "Профессор, д.н.",
+        "load": 660,
+        "salary": 135072.0
+    },
+    {
+        "position_name": "Профессор, к.н.",
+        "load": 660,
+        "salary": 121136.00
+    },
+    {
+        "position_name": "Профессор, б/с",
+        "load": 660,
+        "salary": 107200.00
+    },
+    {
+        "position_name": "Доцент, д.н.",
+        "load": 770,
+        "salary": 114168.00
+    },
+    {
+        "position_name": "Доцент, к.н.",
+        "load": 770,
+        "salary": 107200.00
+    },
+    {
+        "position_name": "Доцент, б/с",
+        "load": 770,
+        "salary": 80400.00
+    },
+    {
+        "position_name": "Старший преподаватель, к.н.",
+        "load": 800,
+        "salary": 79596.00
+    },
+    {
+        "position_name": "Старший преподаватель, б/с",
+        "load": 800,
+        "salary": 53600.00
+    },
+    {
+        "position_name": "Ассистент, к.н.",
+        "load": 850,
+        "salary": 75040.00
+    },
+    {
+        "position_name": "Ассистент,б/с",
+        "load": 850,
+        "salary": 49848.00
+    }
+]
